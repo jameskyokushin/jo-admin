@@ -1,0 +1,45 @@
+<h1>Listing job_orders</h1>
+
+<table>
+  <tr>
+    <th>Company name</th>
+    <th>Contact person</th>
+    <th>Address</th>
+    <th>Contact number</th>
+    <th>System</th>
+    <th>Technical1</th>
+    <th>Technical2</th>
+    <th>Category</th>
+    <th>Status</th>
+    <th>Todo</th>
+    <th>Work done</th>
+    <th>Remarks</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @job_orders.each do |job_order| %>
+  <tr>
+    <td><%= job_order.company_name %></td>
+    <td><%= job_order.contact_person %></td>
+    <td><%= job_order.address %></td>
+    <td><%= job_order.contact_number %></td>
+    <td><%= job_order.system %></td>
+    <td><%= job_order.technical1 %></td>
+    <td><%= job_order.technical2 %></td>
+    <td><%= job_order.category %></td>
+    <td><%= job_order.status %></td>
+    <td><%= job_order.todo %></td>
+    <td><%= job_order.work_done %></td>
+    <td><%= job_order.remarks %></td>
+    <td><%= link_to 'Show', job_order %></td>
+    <td><%= link_to 'Edit', edit_job_order_path(job_order) %></td>
+    <td><%= link_to 'Destroy', job_order, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Job order', new_job_order_path %>
