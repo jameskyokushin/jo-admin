@@ -28,7 +28,7 @@ class JobOrder < ActiveRecord::Base
     def category_tag
         case self.category
           when CATEGORY_SERVICE then :warning
-          when CATEGORY_INSTALLATION then :warning
+          when CATEGORY_INSTALLATION then :blink
         end
    end
 
