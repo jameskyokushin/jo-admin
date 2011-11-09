@@ -1,5 +1,19 @@
 ActiveAdmin.register JobOrder do
-
+filter :company_name
+filter :contact_person
+filter :technical1
+ action_item :only => :show do
+    link_to "COMPLETED", send_joborder_admin_job_order_path(resource)
+  end
+  
+  member_action :send_joborder do
+    @job_oder = JobOrder.find(params[:id])
+    @job_oder.status = JobOrder::STATUS_COMPLETED
+    @job_oder.save
+    
+    redirect_to admin_job_order_path(@job_oder), :notice => "Job Order Completed"
+  end
+  
   scope :all, :default => true
 
   scope :PENDING do |joborders|
@@ -35,10 +49,30 @@ ActiveAdmin.register JobOrder do
      f.input :todo, :input_html => { :rows => 4 }, :label => "Things To do"
      f.input :work_done, :input_html => { :rows => 4 }, :label => "Works Done"
      f.input :remarks, :input_html => { :rows => 4 }, :label => "Remarks"
-     f.input :status, :collection => JobOrder.status_collection, :as => :radio, :hint => "YOU NEED TO PICK ONE STATUS", :include_blank => false
+     f.input :status, :collection => JobOrder.status_collection, :hint => "YOU NEED TO PICK ONE STATUS", :include_blank => false
 
     end
     f.buttons
+  end
+  show :title => :category do
+    panel "Company Information" do
+      attributes_table_for job_order do
+      row("Company Name") { job_order.company_name }
+      row("Contact Person") { job_order.contact_person }
+      row("Address") { job_order.address }
+      row("Contact Number") { job_order.contact_number }
+      row("System") { job_order.system }
+      row("Team Leader") { job_order.technical1 }
+      row("Installer") { job_order.technical2 }
+    panel "Remarks" do
+      attributes_table_for job_order do
+        row("To Do ") { simple_format job_order.todo }
+        row("Work Done") { simple_format job_order.work_done }
+        row("Remarks") { simple_format job_order.remarks }
+      end
+    end
+      end
+    end
   end
   index do
     column :status do |joborder|
