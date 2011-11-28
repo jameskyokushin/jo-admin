@@ -1,4 +1,6 @@
 JoAdmin::Application.routes.draw do
+  devise_for :users
+
   resources :job_orders
 
   ActiveAdmin.routes(self)
