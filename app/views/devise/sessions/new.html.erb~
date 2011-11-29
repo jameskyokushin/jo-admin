@@ -17,8 +17,9 @@
   <% end -%>
 
   <div><%= f.submit "Sign in" %></div>
+  <%= render :partial => "devise/shared/links" %>
 <% end %>
 
-<%= render :partial => "devise/shared/links" %>
+
 </div>
 

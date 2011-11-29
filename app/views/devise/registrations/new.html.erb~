@@ -10,9 +10,9 @@
   <%= f.input :email %>
   <%= f.input :password %>
   <%= f.input :password_confirmation %>
-  <% end %>
+  <%= render :partial => "devise/shared/links" %>
   <div><%= f.submit "Sign up" %></div>
+ <% end %>
 <% end %>
 
-<%= render :partial => "devise/shared/links" %>
 </div>
