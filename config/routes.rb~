@@ -1,7 +1,12 @@
 JoAdmin::Application.routes.draw do
+  devise_for :users
+
+  resources :job_orders
+
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config
+   root :to => "job_order#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
