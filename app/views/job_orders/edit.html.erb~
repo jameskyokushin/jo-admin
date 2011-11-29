@@ -1,4 +1,4 @@
-<h1>Editing job_order</h1>
+
 
 <%= render 'form' %>
 

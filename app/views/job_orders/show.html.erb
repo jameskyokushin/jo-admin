@@ -11,7 +11,7 @@
 </div>
 <br />
 <br />
-<p id="notice"><%= notice %></p>
+<!--<p id="notice"><%= notice %></p>
 
 <p>
   <b>Company name:</b>
@@ -72,8 +72,64 @@
   <b>Remarks:</b>
   <%= @job_order.remarks %>
 </p>
-
+<p>
+  <b>Prepared by:</b>
+  <%= @job_order.prepared_by %>
+</p>
 
 <%= link_to 'Edit', edit_job_order_path(@job_order) %> |
-<%= link_to 'Back', job_orders_path %>
+<%= link_to 'Back', job_orders_path %>-->
+ <header>
+   <%= image_tag("header2.1.jpg", :alt => "ASI-HEADER", :class => "round") %>
+  </headers>
+<table border="2" cellpadding="0" cellspacing="0" width="100%">
+      <tr>
+        <th width="55%"><h4><b>Generated Job-order NO:</b> 2011-0A0<%= @job_order.id %></h4></th>
+        <th width="45%"></th>
+      </tr>
+      <tr>
+        <td><p><b>Date Issue:</b><%= @job_order.created_at %></p></td>
+        <td><p><b>Datetime Finished:</b></p></td>
+      </tr>
+      <tr>
+        <td><p><b>Company:</b><%= @job_order.company_name %></p></td>
+        <td><p><b>Team Leader:</b><%= @job_order.technical1 %></p></td>
+      </tr>
+      <tr>
+        <td><p><b>Address:</b><%= @job_order.address %></p></td>
+        <td><p><b>Technical:</b><%= @job_order.technical2 %></p></td>
+      </tr>
+      <tr>
+        <td><p><b>Contact Person:</b><%= @job_order.contact_person %></p></td>
+        <td><p><b>System:</b><%= @job_order.system %></p></td>
+      </tr>
+      <tr>
+        <td><p><b>Contact No:</b><%= @job_order.contact_number %></p></td>
+        <td></td>
+      </tr>
+    </table>
+    <table border="2" cellpadding="10" cellspacing="10" width="100%"> 
+      <tr>
+        <td height="135"><p><b>To Do:</b><%= @job_order.todo %></p></td>
+      </tr>
+      <tr>
+        <td height="135"><p><b>Work Done:</b><%= @job_order.work_done %></p></td>
+      </tr>
+      <tr>
+        <td height="135"><p><b>Remarks:</b><%= @job_order.remarks %></p></td>
+      </tr>
+    </table>
+    <table border="2" cellpadding="0" cellspacing="0" width="100%">
+      <tr>
+        <td width="55%"><p><b>Prepared by:</b><%= @job_order.prepared_by %></p></td>
+        <td width="45%"><p><b>Approved by:</b>____________________</p></td>
+      </tr>
+      <tr>
+        <td><p><b>Status:</b><%= @job_order.status %></p></td>
+        <td><p><b>Client Signature:</b>____________________</p></td>
+      </tr>
+
+      </table>
+
 </div>
+

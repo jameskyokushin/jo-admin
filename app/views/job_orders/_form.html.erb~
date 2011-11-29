@@ -28,6 +28,7 @@
      <%= f.input :remarks, :input_html => { :rows => 4,  }, :label => "Remarks" %>
      <%= f.input :status, :collection => JobOrder.status_collection, :hint => "YOU NEED TO PICK ONE STATUS", :include_blank => false, :wrapper_html => { :style => "display:none;" }
  %>
+     <%= f.input :prepared_by,  :collection => [["- Auto Generated -","  ",current_user.email]], :wrapper_html => { :style => "display:none;" }, :include_blank => false %>
    <% end %>
    <%= f.buttons %>
 <% end %>
