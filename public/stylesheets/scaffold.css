@@ -76,4 +76,9 @@ div.field, div.actions {
  float: left;
  font-weight: bold;
 }
+header img {
+  padding: 0em;
+  background: #fff;
+  width: 750px;
+}
 

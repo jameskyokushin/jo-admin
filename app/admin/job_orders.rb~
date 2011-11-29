@@ -2,14 +2,14 @@ include ActionView::Helpers::NumberHelper
 
 def generate_joborder(joborder)
   # Generate invoice
-  Prawn::Document.generate @invoice.invoice_location do |pdf|
+  Prawn::Document.generate @joborder.joborder_location do |pdf|
     # Title
-    pdf.text "Invoice ##{invoice.code}", :size => 25
+    #pdf.text "Invoice ##{invoice.code}", :size => 25
 
     # Client info
-    pdf.text invoice.client.name
-    pdf.text invoice.client.address
-    pdf.text invoice.client.phone
+    #pdf.text invoice.client.name
+    #pdf.text invoice.client.address
+    #pdf.text invoice.client.phone
 
     #pdf.draw_text "#{t('.created_at')}: #{l(invoice.created_at, :format => :short)}", :at => [pdf.bounds.width / 2, pdf.bounds.height - 30]
 

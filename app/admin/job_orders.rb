@@ -166,6 +166,7 @@ filter :technical1
     column :company_name
     column :system
     column :technical1
+    column :prepared_by
     column do |joborder|
       link_to("Details", admin_job_order_path(joborder)) + " | " + \
       link_to("Delete", admin_job_order_path(joborder), :method => :delete, :confirm => "Are you sure?")
