@@ -1,9 +1,9 @@
 <style type="text/css">
-   @media print{
-   
-   #print{ display:none;}
-   
-   }
+   @media 
+   print{#print{ display:none;} }
+   h4 { color:olive;font-size: 16pt; }
+   p { color: #5C5858;font-size: 14pt; }
+   b { color:#000; font size="4" }
 </style>
 
 <div id="form1">
@@ -21,74 +21,7 @@
 </div>
 <br />
 <br />
-<!--<p id="notice"><%= notice %></p>
 
-<p>
-  <b>Company name:</b>
-  <%= @job_order.company_name %>
-</p>
-
-<p>
-  <b>Contact person:</b>
-  <%= @job_order.contact_person %>
-</p>
-
-<p>
-  <b>Address:</b>
-  <%= @job_order.address %>
-</p>
-
-<p>
-  <b>Contact number:</b>
-  <%= @job_order.contact_number %>
-</p>
-
-<p>
-  <b>System:</b>
-  <%= @job_order.system %>
-</p>
-
-<p>
-  <b>Technical1:</b>
-  <%= @job_order.technical1 %>
-</p>
-
-<p>
-  <b>Technical2:</b>
-  <%= @job_order.technical2 %>
-</p>
-
-<p>
-  <b>Category:</b>
-  <%= @job_order.category %>
-</p>
-
-<p>
-  <b>Status:</b>
-  <%= @job_order.status %>
-</p>
-
-<p>
-  <b>Todo:</b>
-  <%= @job_order.todo %>
-</p>
-
-<p>
-  <b>Work done:</b>
-  <%= @job_order.work_done %>
-</p>
-
-<p>
-  <b>Remarks:</b>
-  <%= @job_order.remarks %>
-</p>
-<p>
-  <b>Prepared by:</b>
-  <%= @job_order.prepared_by %>
-</p>
-
-<%= link_to 'Edit', edit_job_order_path(@job_order) %> |
-<%= link_to 'Back', job_orders_path %>-->
  <header>
    <%= image_tag("header2.gif", :alt => "ASI-HEADER", :class => "round") %>
   </headers>
@@ -144,4 +77,5 @@
 </div>
 <div id="print">
 <center><input type=button onclick="window.print()" value='PRINT'></center>
+</div>
 
