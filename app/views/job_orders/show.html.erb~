@@ -1,13 +1,23 @@
+<style type="text/css">
+   @media print{
+   
+   #print{ display:none;}
+   
+   }
+</style>
+
 <div id="form1">
 <br />
 <br />
-<div id="link1">
-<%= link_to 'listing Job-Orders', job_orders_path %>||
-<%= link_to 'Create Job-Order', new_job_order_path %>
-</div>
+<div id="print">
+   <div id="link1">
+     <%= link_to 'listing Job-Orders', job_orders_path %>||
+     <%= link_to 'Create Job-Order', new_job_order_path %>
+   </div>
 <div id="link">
 <%= link_to "Sign out",  destroy_user_session_path,  :method=> :delete %> ||
 <%= current_user.email if user_signed_in? %>
+</div>
 </div>
 <br />
 <br />
@@ -132,5 +142,5 @@
       </table>
 
 </div>
-<input type=button onclick="window.print()" value='PRINT'></center>
+<center><input type=button onclick="window.print()" value='PRINT'></center>
 
