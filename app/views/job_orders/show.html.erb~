@@ -14,10 +14,10 @@
      <%= link_to 'listing Job-Orders', job_orders_path %>||
      <%= link_to 'Create Job-Order', new_job_order_path %>
    </div>
-<div id="link">
-<%= link_to "Sign out",  destroy_user_session_path,  :method=> :delete %> ||
-<%= current_user.email if user_signed_in? %>
-</div>
+     <div id="link">
+       <%= link_to "Sign out",  destroy_user_session_path,  :method=> :delete %> ||
+       <%= current_user.email if user_signed_in? %>
+     </div>
 </div>
 <br />
 <br />
@@ -90,7 +90,7 @@
 <%= link_to 'Edit', edit_job_order_path(@job_order) %> |
 <%= link_to 'Back', job_orders_path %>-->
  <header>
-   <%= image_tag("header2.1.jpg", :alt => "ASI-HEADER", :class => "round") %>
+   <%= image_tag("header2.gif", :alt => "ASI-HEADER", :class => "round") %>
   </headers>
 <table border="2" cellpadding="0" cellspacing="0" width="100%">
       <tr>
@@ -142,5 +142,6 @@
       </table>
 
 </div>
+<div id="print">
 <center><input type=button onclick="window.print()" value='PRINT'></center>
 
