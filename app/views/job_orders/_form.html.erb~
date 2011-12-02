@@ -12,7 +12,7 @@
 <br />
 <br />
  <header>
-   <%= image_tag("header.gif", :alt => "ASI-HEADER", :class => "round") %>
+   <%= image_tag("header2.gif", :alt => "ASI-HEADER", :class => "round") %>
   </headers>
 <%= semantic_form_for(@job_order) do |f| %>
    <%= f.inputs "Company Details" do %>

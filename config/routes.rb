@@ -7,7 +7,7 @@ JoAdmin::Application.routes.draw do
 
   devise_for :admin_users, ActiveAdmin::Devise.config
    root :to => "job_orders#index"
-
+   match '/pending',    :to => 'job_orders#pending'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
