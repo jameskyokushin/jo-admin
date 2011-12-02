@@ -31,7 +31,7 @@
     <td><%= job_order.company_name %></td> 
     <td><%= job_order.system %></td>
     <td><%= job_order.technical1 %></td>
-    <td><%= link_to 'Show', job_order %></td>
+    <td><%= link_to 'Print View', job_order %></td>
     <!--<td><%= link_to 'Edit', edit_job_order_path(job_order) %></td>
     <td><%= link_to 'Destroy', job_order, :confirm => 'Are you sure?', :method => :delete %></td>-->
   </tr>
