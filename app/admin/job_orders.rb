@@ -130,7 +130,7 @@ filter :technical1
      f.input :technical2, :label => "Technical", :hint => "Please your Name (example:JUAN DELA CRUZ)"
      f.input :todo, :input_html => { :rows => 4 }, :label => "Things To do"
      f.input :work_done, :input_html => { :rows => 4 }, :label => "Works Done"
-     f.input :remarks, :input_html => { :rows => 4,  }, :label => "Remarks"
+     f.input :remarks, :input_html => { :rows => 4,  }, :label => "Notes"
      f.input :status, :collection => JobOrder.status_collection, :hint => "YOU NEED TO PICK ONE STATUS", :include_blank => false, :wrapper_html => { :style => "display:none;" }
 
     end
