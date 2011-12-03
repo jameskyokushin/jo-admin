@@ -1,6 +1,6 @@
 ActiveAdmin::Dashboards.build do
   
-   section "Service Statistics" do
+   section "Job-Order Statistics" do
     div :class => "attributes_table" do
       table do
         tr do
@@ -26,7 +26,7 @@ ActiveAdmin::Dashboards.build do
       end
     end
   end
-   section "Latest Services" do
+   section "Latest Service/Installation" do
     table_for JobOrder.order('created_at desc').limit(5).all do |t|
       t.column("Status") { |joborder| status_tag joborder.status, joborder.status_tag }
       t.column("Company") { |joborder|joborder.company_name }

@@ -1,6 +1,6 @@
 ActiveAdmin::Dashboards.build do
   
-   section "Service Statistics" do
+   section "Job-Order Statistics" do
     div :class => "attributes_table" do
       table do
         tr do
