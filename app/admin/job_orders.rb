@@ -127,11 +127,12 @@ filter :technical1
       
       f.input :system,:collection => [["- Select -","  "],["Automatic Gates"," Automatic Gates"],["Metal Detectors","Metal Detectors"],["CCTV","CCTV"],["Access Control","Access Control"],["Intrusion","Intrusion"],["Fire Alarm","Fire Alarm"],["Light Automation","Light Automation"],["Automated Window Treatment","Automated Window Treatment"],["Home Run","Home Run"],["Installation Accessories","Installation Accessories"],["Cable","Cable"],["Radio","Radio"],["Voip","Voip"],["Network Cabinet","Network Cabinet"],["Public Address System","Public Address System"],["Telecom","Telecom"],["Id Printer","Id Printer"],["Pc Pheripherals","Pc Pheripherals"],["Card","Card"],["Networking","Networking"],["Door Automation","Door Automation"],["Parking System","Parking System"],["Turnstile","Turnstile"],["Others","Others"]], :include_blank => false
      f.input :technical1, :label => "Team Leader", :hint => "Please your Name (example:JUAN DELA CRUZ)"
-     f.input :technical2, :label => "Technical", :hint => "Please your Name (example:JUAN DELA CRUZ)"
+     f.input :technical2, :label => "Technical", :collection => [[" - Select -"," - Select - "],["RECHIE DELEGENCIA","RECHIE DELEGENCIA"],["NUEVA SOTERANA ROBERT","NUEVA SOTERANA ROBERT"],["RONNIE OROLFO","RONNIE OROLFO"],["OCON FELIX","OCON FELIX"],["GLENN PIDLAOAN","GLENN PIDLAOAN"],["JENNY UNGUI", "JENNY UNGUI"]], :include_blank => false
      f.input :todo, :input_html => { :rows => 4 }, :label => "Things To do"
      f.input :work_done, :input_html => { :rows => 4 }, :label => "Works Done"
      f.input :remarks, :input_html => { :rows => 4,  }, :label => "Notes"
      f.input :status, :collection => JobOrder.status_collection, :hint => "YOU NEED TO PICK ONE STATUS", :include_blank => false, :wrapper_html => { :style => "display:none;" }
+     f.input :prepared_by,  :collection => [["- Auto Generated -","ADMIN"]], :wrapper_html => { :style => "display:none;" }, :include_blank => false
 
     end
     f.buttons

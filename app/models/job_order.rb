@@ -1,5 +1,10 @@
 class JobOrder < ActiveRecord::Base
 
+  validates :company_name,
+            :category,
+            :system,
+            :technical1, :presence => true
+
   STATUS_PENDING = 'PENDING'
   STATUS_COMPLETED  = 'COMPLETED'
   CATEGORY_SERVICE = 'SERVICE'
