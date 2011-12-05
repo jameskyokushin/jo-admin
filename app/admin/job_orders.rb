@@ -131,8 +131,10 @@ filter :technical1
                                                                       ["METCHIL BALILI"],
                                                                       ["LEMUEL IBO","LEMUEL IBO"],
                                                                       ["NOWEL ROBIE","NOWEL ROBIE"],
-                                                                      ["REYNALDO CARDANIO","CARDANIO"],
-                                                                      ["ALPIN EBO","ALPIN EBO"]],
+                                                                      ["REYNALDO CARDANIO","REYNALDO CARDANIO"],
+                                                                      ["ALPIN EBO","ALPIN EBO"],
+                                                                      ["RECHIE DELENGENCIA","RECHIE DELENGENCIA"],
+                                                                      ["RONNIE OROLFO","RONNIE OROLFO"]],
                                                                       :include_blank => false
      f.input :technical2, :label => "Technical", :collection =>       [[" - Select Technical -"," - Select - "],
                                                                       ["ARVIN LAPARAN","ARVIN LAPARAN"],
@@ -144,7 +146,9 @@ filter :technical1
                                                                       ["MARJHUN RAMIREZ","MARJHUN RAMIREZ"],
                                                                       ["HERMINIO DECRETALES", "HERMINIO DECRETALES"],
                                                                       ["JASON SEDILLO","JASON SEDILLO"],
-                                                                      ["ALPIN EBO","ALPIN EBO"]], 
+                                                                      ["ALPIN EBO","ALPIN EBO"],
+                                                                      ["ROBERT NUEVA","ROBERT NUEVA"],
+                                                                      ["GLENN PIDLAOAN","GLENN PIDLAOAN"]], 
                                                                       :include_blank => false
      f.input :todo, :input_html => { :rows => 4 }, :label => "Things To do"
      f.input :work_done, :input_html => { :rows => 4 }, :label => "Works Done"
