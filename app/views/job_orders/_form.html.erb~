@@ -35,7 +35,8 @@
                                                                       ["ALPIN EBO","ALPIN EBO"],
                                                                       ["RECHIE DELENGENCIA","RECHIE DELENGENCIA"],
                                                                       ["RONNIE OROLFO","RONNIE OROLFO"],
-                                                                      ["ALBERTO ALINSOOT","ALBERTO ALINSOOT"]],
+                                                                      ["ALBERTO ALINSOOT","ALBERTO ALINSOOT"],
+                                                                      ["MELVIN ARMAS","MELVIN ARMAS"]],
                                                                       :include_blank => false %>
      <%= f.input :technical2, :label => "Technical", :collection =>       [[" - Select Technical -"," - Select - "],
                                                                       ["ARVIN LAPARAN","ARVIN LAPARAN"],

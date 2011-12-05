@@ -9,7 +9,7 @@ gem 'activeadmin'
 gem 'sqlite3'
 gem 'prawn'
 
-
+gem 'jquery-rails'
 # Use unicorn as the web server
 # gem 'unicorn'
 
