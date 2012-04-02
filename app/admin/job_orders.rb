@@ -140,6 +140,7 @@ filter :technical1
   show :title => :category do
     panel "Company Information" do
       attributes_table_for job_order do
+      row("Date Issue") { job_order.date_issued}
       row("Company Name") { job_order.company_name }
       row("Contact Person") { job_order.contact_person }
       row("Address") { job_order.address }
@@ -149,6 +150,7 @@ filter :technical1
       row("Installer") { job_order.technical2 }
     panel "Remarks" do
       attributes_table_for job_order do
+        row("Date Created") { Date.today(job_order.created_at)}
         row("To Do ") { simple_format job_order.todo }
         row("Work Done") { simple_format job_order.work_done }
         row("Remarks") { simple_format job_order.remarks }
@@ -168,7 +170,7 @@ filter :technical1
     column :system
     column :technical1
     column :prepared_by
-    column :created_at
+    column :date_issued
     column do |joborder|
       link_to("Details", admin_job_order_path(joborder)) + " | " + \
       link_to("Delete", admin_job_order_path(joborder), :method => :delete, :confirm => "Are you sure?")
