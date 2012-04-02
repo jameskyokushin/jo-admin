@@ -150,7 +150,7 @@ filter :technical1
       row("Installer") { job_order.technical2 }
     panel "Remarks" do
       attributes_table_for job_order do
-        row("Date Created") { job_order.created_at }
+        row("Date Created") { Date.today(job_order.created_at)}
         row("To Do ") { simple_format job_order.todo }
         row("Work Done") { simple_format job_order.work_done }
         row("Remarks") { simple_format job_order.remarks }
@@ -170,7 +170,6 @@ filter :technical1
     column :system
     column :technical1
     column :prepared_by
-    column :date_issued
     column do |joborder|
       link_to("Details", admin_job_order_path(joborder)) + " | " + \
       link_to("Delete", admin_job_order_path(joborder), :method => :delete, :confirm => "Are you sure?")
